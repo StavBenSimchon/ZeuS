@@ -1,0 +1,19 @@
+{
+  "name": "node-client",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/webpack/bin/webpack.js  ./src/index.js --mode=development",
+    "build": "./node_modules/webpack/bin/webpack.js  ./src/index.js --mode=production",
+    "pack": "{{ run command to compress files }}",
+    "run": "echo running"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

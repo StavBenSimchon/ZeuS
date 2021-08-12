@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  node-a:
+    container_name: node-a
+    hostname: node-a
+    build: 
+      context: ./node-a
+      dockerfile: Dockerfile
+    env_file: 
+      - ./node-a/.env
+    ports:
+      - "3000:3000"
+    # networks:
+    #   - new

@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  node-a:
+    container_name: node-a
+    hostname: node-a
+    build: 
+      # target: builder
+      dockerfile: Dockerfile
+    # entrypoint: /code/entrypoint.sh
+    # command: /bin/sh -c "while sleep 1000; do :; done"
+    volumes: 
+      - .:/workspace:cached
+    env_file: 
+      - .env
+    ports:
+      - "3000:3000"
+    # networks:
+    #   - new
+      # - .:/workspace:cached
+
+
+# networks:
+#   new:
+# secrets:
+#   my_secret:
+#     file: ./secret.txt
+# configs:
+#   my_config:
+#     file: ./config.txt
+# volumes:
+#   node_modules:
+#     external: true
+#     name: my-app-data
